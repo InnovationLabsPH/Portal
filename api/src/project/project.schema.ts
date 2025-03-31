@@ -1,18 +1,22 @@
-import {Schema, Document} from 'mongoose'
+import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose'
+import { Document } from 'mongoose'
 
-export const ProjectSchema = new Schema({
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  participants: {type: [String]},
-  startDate: { type: Date, required: true },
-  endDate: { type: Date, required: true },
-});
-
-export interface Project extends Document {
-  id: string;
+@Schema()
+export class Project extends Document {
+  @Prop({required: true})
   name: string;
+
+  @Prop({required: true})
   description: string;
+
+  @Prop({type: [String], default: []})
   participants: string[];
+
+  @Prop({required: true})
   startDate: Date;
+
+  @Prop({required: true})
   endDate: Date;
 }
+
+export const ProjectSchema = SchemaFactory.createForClass(Project);
