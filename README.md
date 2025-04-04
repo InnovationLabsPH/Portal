@@ -9,7 +9,7 @@ Hello, Portal!
 2. [Clone the repository](#step-2-clone-the-repo)  
 3. [Create or select a branch](#step-3-create-or-select-a-branch)  
 4. [Make changes](#step-4-make-changes)  
-5. [Submit for code review](#step-5-submit-for-review)  
+5. [Submit for code review](#step-5-submit-for-code-review)  
 6. [Cleanup](#step-6-cleanup) 
 
 ---
@@ -48,8 +48,12 @@ It might be a good idea to create a **git** folder where all of your other clone
 ---
 
 ### Step 3: Create or select a branch  
+
 A branch lets you work on new features or fixes without affecting the main project. When creating a branch, use a descriptive name that clearly indicates what you are working on.
 
+1. [Create a branch](#how-to-create-a-branch)
+2. [Select a branch](#how-to-select-a-branch)
+   
 #### How to create a branch:  
 1. From the upper-left corner of GitHub, click **main** just beside **Branch**.  
 
@@ -98,7 +102,7 @@ You successfully switched to your selected branch!!!
 
 ---
 
-### Step 5: Submit for review  
+### Step 5: Submit for code review  
 - When you're satisfied with your work, create a **pull request (PR)** to request a code review for all of your commits.  
 - TODO  
 
