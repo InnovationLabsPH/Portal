@@ -4,14 +4,26 @@ Hello, Portal!
 
 ## **How to Contribute?**  
 
+### **Table of Contents**  
+1. [Set up your local development environment](#step-1-set-up-your-local-development-environment)  
+2. [Clone the repository](#step-2-clone-the-repo)  
+3. [Create or select a branch](#step-3-create-or-select-a-branch)  
+4. [Make changes](#step-4-make-changes)  
+5. [Submit for code review](#step-5-submit-for-review)  
+6. [Cleanup](#step-6-cleanup) 
+
+---
+
 ### Step 1: Set up your local development environment  
 Before you start, install the necessary tools to start working on the project.
 
 #### Example:  
-- Nodejs  
-- Python  
+- Nodejs    
 - Visual Studio Code  
-- GitHub Desktop  
+- GitHub Desktop
+- Others...
+
+---
 
 ### Step 2: Clone the repo  
 Cloning means downloading the project to your computer.  
@@ -84,6 +96,8 @@ You successfully switched to your selected branch!!!
 - Ideally, do it periodically to have savepoints and to back up your progress.  
 - TODO  
 
+---
+
 ### Step 5: Submit for review  
 - When you're satisfied with your work, create a **pull request (PR)** to request a code review for all of your commits.  
 - TODO  
@@ -93,5 +107,3 @@ You successfully switched to your selected branch!!!
 - TODO  
 
 Happy coding! hehe  
-
----
