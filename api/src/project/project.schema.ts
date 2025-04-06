@@ -1,9 +1,9 @@
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose'
 import { Document } from 'mongoose'
 
-@Schema()
+@Schema() // tells nest that this is a schema
 export class Project extends Document {
-  @Prop({required: true})
+  @Prop({required: true}) // short for property
   name: string;
 
   @Prop({required: true})
