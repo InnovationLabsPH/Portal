@@ -9,4 +9,9 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  // this should prompt login TODO
+  @Get('login')
+  getLogin() {
+  }
 }

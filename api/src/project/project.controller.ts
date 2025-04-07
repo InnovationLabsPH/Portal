@@ -1,6 +1,7 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, UseGuards } from '@nestjs/common';
 import { ProjectService } from './project.service';
 import { Project } from './project.schema';
+import { JwtAuthGuard } from 'src/auth/jwt.guard';
 
 @Controller('project')
 export class ProjectController {
@@ -13,6 +14,7 @@ export class ProjectController {
    * @returns An array of Projects in JSON format.
    */
   @Get()
+  @UseGuards(JwtAuthGuard)
   async getAllProjects(): Promise<Project[]> {
     return this.projectService.getAllProjects();
   } 
