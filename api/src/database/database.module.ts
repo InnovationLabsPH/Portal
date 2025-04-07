@@ -6,8 +6,6 @@ import { ConfigModule } from '@nestjs/config';
  * @module DatabaseModule
  *
  * Manages dabatase connection.
- *
- * - Might be removed and moved into app module instead since it really doesnt do anything else atm.
  */
 @Module({
   imports:  [

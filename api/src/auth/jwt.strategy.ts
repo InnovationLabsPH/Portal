@@ -3,7 +3,7 @@ import { PassportStrategy } from '@nestjs/passport';
 import { passportJwtSecret } from 'jwks-rsa';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 
-// check env variables
+// Check if env variables are valid
 const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN;
 const AUTH0_AUDIENCE = process.env.AUTH0_AUDIENCE;
 const AUTH0_ISSUER = process.env.AUTH0_ISSUER;
@@ -12,6 +12,12 @@ if (!AUTH0_DOMAIN) throw new Error('Missing AUTH0_DOMAIN environment variable');
 if (!AUTH0_AUDIENCE) throw new Error('Missing AUTH0_AUDIENCE environment variable');
 if (!AUTH0_ISSUER) throw new Error('Missing AUTH0_ISSUER environment variable');
 
+/**
+ *
+ * JwtStrategy class extends PassportStrategy
+ *
+ * Handles JWT authentication strategy.
+ */
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor() {
