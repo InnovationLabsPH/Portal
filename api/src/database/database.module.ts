@@ -5,7 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 /**
  * @module DatabaseModule
  *
- * Manages dabatase connection.
+ * Manages database connection.
  */
 @Module({
   imports:  [
