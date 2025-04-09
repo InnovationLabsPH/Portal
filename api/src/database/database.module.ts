@@ -1,8 +1,12 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { DatabaseService } from './database.service';
 import { ConfigModule } from '@nestjs/config';
 
+/**
+ * @module DatabaseModule
+ *
+ * Manages database connection.
+ */
 @Module({
   imports:  [
     // load env file global
@@ -12,6 +16,5 @@ import { ConfigModule } from '@nestjs/config';
     // connect to mongodb
     MongooseModule.forRoot(process.env.MONGO_URI || 'mongodb://localhost:27017'),
   ],
-  providers: [DatabaseService]
 })
 export class DatabaseModule {}

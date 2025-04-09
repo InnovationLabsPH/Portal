@@ -1,19 +1,23 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, UseGuards } from '@nestjs/common';
 import { ProjectService } from './project.service';
 import { Project } from './project.schema';
 
 @Controller('project')
 export class ProjectController {
-  // constructor to load the services
-  constructor(private readonly projectService: ProjectService) {};
+  constructor(
+    private readonly projectService: ProjectService
+  ) {};
 
+  /**
+   * Retrieves all projects from the database
+   * @returns An array of Projects in JSON format.
+   */
   @Get()
   async getAllProjects(): Promise<Project[]> {
-    // inject the services
     return this.projectService.getAllProjects();
   } 
 
-  // deb connection test
+  // db connection test, WILL BE REMOVED
   @Get('/create')
   async createEmptyProject(): Promise<Project> {
     return this.projectService.createEmptyProject();

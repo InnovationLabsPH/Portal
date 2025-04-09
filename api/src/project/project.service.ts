@@ -5,13 +5,19 @@ import { Model } from 'mongoose';
 
 @Injectable()
 export class ProjectService {
-  constructor(@InjectModel(Project.name) private ProjectModel: Model<Project>) {}
+  constructor(
+    @InjectModel(Project.name) private ProjectModel: Model<Project>
+  ) {}
 
+  /**
+   * Retrieves all projects from the database
+   * @returns A promise that resolves to an array of Project objects.
+   */
   async getAllProjects(): Promise<Project[]>{
-    return this.ProjectModel.find().exec();
+    return this.ProjectModel.find();
   }
 
-  // db connection test
+  // db connection test for insert, WILL BE REMOVED
   async createEmptyProject(): Promise<Project> {
     const newProject = new this.ProjectModel({
       name: 'Test Project',
