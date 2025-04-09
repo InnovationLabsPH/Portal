@@ -1,113 +1,188 @@
-# **Sorsogon Community Innovation Labs Portal**  
+# **Sorsogon Community Innovation Labs Portal**
 
-Hello, Portal!  
+Hello, Portal!
 
-## **How to Contribute?**  
+## **How to Contribute?**
 
-### **Table of Contents**  
-1. [Set up your local development environment](#step-1-set-up-your-local-development-environment)  
-2. [Clone the repository](#step-2-clone-the-repo)  
-3. [Create or select a branch](#step-3-create-or-select-a-branch)  
-4. [Make changes](#step-4-make-changes)  
-5. [Submit for code review](#step-5-submit-for-code-review)  
-6. [Cleanup](#step-6-cleanup) 
+### **Table of Contents**
+
+1. [Set up your local development environment](#step-1-set-up-your-local-development-environment)
+
+2. [Clone the repository](#step-2-clone-the-repo)
+
+3. [Create and select a branch](#step-3-create-and-select-a-branch)
+
+4. [Make changes](#step-4-make-changes)
+
+5. [Submit for code review](#step-5-submit-for-code-review)
+
+6. [Cleanup](#step-6-cleanup)
 
 ---
 
-### Step 1: Set up your local development environment  
-Before you start, install the necessary tools to start working on the project.
+### Step 1: Set up your local development environment
 
-#### Example:  
-- Nodejs    
-- Visual Studio Code  
-- GitHub Desktop
+Before you start, install the necessary tools to start working on the project.
+#### Example:
+- [Nodejs](https://nodejs.org/dist/v22.14.0/node-v22.14.0-x64.msi)
+- [Visual Studio Code](https://code.visualstudio.com/Download)
 - Others...
 
 ---
 
-### Step 2: Clone the repo  
-Cloning means downloading the project to your computer.  
+### Step 2: Clone the repo
 
-#### Using VSCode:  
-1. Select "**Clone Repository**" from the Source Control Tab:  
+Cloning means downloading the project to your computer.
 
-   <img src="https://github.com/user-attachments/assets/ab3787a7-1a45-4288-8787-4271fa1ea66e" />
+#### Using VScode:
 
-2. Copy the repository clone url into **vscode**:  
+1. Open `vscode` and press `ctrl + \`  to open the terminal
 
-   <img src="https://github.com/user-attachments/assets/21d01ee8-5ce4-4d7f-aa93-5378fdce0332" />
+2. Create a git directory to store all of your repository if you don't have one yet and navigate towards it:
+```bash
+mkdir ~\git
+cd ~\git
+```
 
-   <img src="https://github.com/user-attachments/assets/dd6227cc-c5ab-4023-8f2e-a1da31c3f1c9" />
+3. Copy the repository URL from GitHub:
 
-It might prompt you to log in with your GitHub account first if you aren't logged in.  
+4. Clone the repository: 
+```bash
+git clone https://github.com/InnovationLabsPH/Portal.git
+```
 
-After that, it will just prompt you where to download the repository and you'll be good to go.  
-
-It might be a good idea to create a **git** folder where all of your other cloned repositories will be placed.  
+5. Open the newly cloned repo inside `vscode`:
+```bash
+code ~\git\Portal
+```
 
 ---
 
-### Step 3: Create or select a branch  
+### Step 3: Create and select a branch
 
 A branch lets you work on new features or fixes without affecting the main project. When creating a branch, use a descriptive name that clearly indicates what you are working on.
 
-1. [Create a branch](#how-to-create-a-branch)
-2. [Select a branch](#how-to-select-a-branch)
-   
-#### How to create a branch:  
-1. From the upper-left corner of GitHub, click **main** just beside **Branch**.  
+#### Using Terminal:
+1. [Create a branch (Terminal)](#How-to-create-a-branch-using-the-terminal)
+2. [Switch Branches (Terminal)](#How-to-select-a-branch-using-the-terminal)
 
-   <img src="https://github.com/user-attachments/assets/095d812d-b356-49f3-81a5-58ed74357e8a" />
+#### Using vscode:
+1. [Create a branch (vscode)](#how-to-create-a-branch-inside-vscode)
+2. [Select a branch (vscode)](#how-to-select-a-branch-inside-vscode)
 
-2. In the search bar, type the name of your new branch. A "**Create branch ...**" option should appear below.  
+#### How to create a branch using the terminal:
 
-   <img src="https://github.com/user-attachments/assets/f6fa1368-21df-411a-b39b-e0eb229cc4b8" />
+1. Make sure you are inside your projects directory.
 
-3. Click "**Create branch**" and it should automatically create and switch to the new branch.  
+2. Create a branch using `git branch <branch-name>` command. Make sure that the branch name describes the purpose of the branch and replaces spaces with `-`:
+```bash
+git branch <replace-this-with-your-branch-named>
+```
 
-   <img src="https://github.com/user-attachments/assets/f949c358-9e3c-40b9-ba50-4b180062dd3b" />
+3. You can check if the branch was created successfully using `git branch`. A list of branches should now appear:
+```bash
+git branch
+```
 
-You successfully created a new branch!!!  
+4. We then switch into our newly created branch **(This is important)**:
+```bash
+git checkout <branch-name>
+```
 
-#### How to select a branch:  
-1. Inside **VSCode**, navigate to the **Source Control** tab. Make sure that the project repository you will be working on is open/active inside the editor.  
+5. Now we need to upload the branch we created into the remote repository so other people are aware of it:
+```bash
+git push --set-upstream origin <branch-name>
+```
 
-   ![image](https://github.com/user-attachments/assets/955de702-c626-4b16-90eb-56522f668436)
-
-2. Press the **pull** command to fetch updates from the remote repository, including newly created **branches**.  
-   - If a branch you created is missing, you probably haven't **pulled** the update into your local repo.  
-
-   ![image](https://github.com/user-attachments/assets/f2152c7e-a3da-493e-8f6c-eefabcbe98ed)
-
-3. Click the "**Auto**" button to select which branch you would like to work on.  
-
-   ![image](https://github.com/user-attachments/assets/ea9f9775-9afc-4ea7-9042-031e2917abea)
-
-4. It should now list all the available branches. Feel free to select the branch you would be working with and press **OK**.  
-
-   ![image](https://github.com/user-attachments/assets/2674abbb-b865-422f-9182-bf186c90531b)
-
-5. The currently selected branch name will now be displayed.  
-
-   ![image](https://github.com/user-attachments/assets/32dae766-9142-4ec3-be21-deb34fc4716d)
-
-You successfully switched to your selected branch!!!  
+6. We are done, you successfully created a new branch and ready to start coding!
 
 ---
 
-### Step 4: Make changes  
-- Commit and push your code changes to the branch you cloned.  
-- Ideally, do it periodically to have savepoints and to back up your progress.  
-- TODO  
+#### How to select a branch using the terminal:
+
+1. First we need to list all available branches:
+```bash
+git branch -a
+```
+
+2. After choosing the branch you want to work with we use the `git checkout <branch-name>` command. We will ignore the `/remotes/origin/` part and simply use the branch name:
+```bash
+git checkout <branch-name>
+```
+
+3.  If this is the first time you used this branch then you probably need to set the upstream (this tells git where to push/upload your code):
+```bash
+git push --set-upstream origin <branch-name>
+```
 
 ---
 
-### Step 5: Submit for code review  
-- When you're satisfied with your work, create a **pull request (PR)** to request a code review for all of your commits.  
-- TODO  
+#### How to create a branch inside vscode:
 
-### Step 6: Cleanup  
-- When the task is done and passed for the code review and the changes are merged into the main branch, delete the branch that you created to fully clean things up.  
-- TODO  
+1. From the upper-left corner of GitHub, click **main** just beside **Branch**.
 
-Happy coding! hehe  
+<img src="https://github.com/user-attachments/assets/095d812d-b356-49f3-81a5-58ed74357e8a" />
+
+2. In the search bar, type the name of your new branch. A "**Create branch ...**" option should appear below.
+
+<img src="https://github.com/user-attachments/assets/f6fa1368-21df-411a-b39b-e0eb229cc4b8" />
+
+3. Click "**Create branch**" and it should automatically create and switch to the new branch.
+
+<img src="https://github.com/user-attachments/assets/f949c358-9e3c-40b9-ba50-4b180062dd3b" />
+
+You successfully created a new branch!!!
+
+#### How to select a branch inside vscode:
+
+1. Inside `vscode`, navigate to the `Source Control` tab. Make sure that the project repository you will be working on is open/active inside the editor.
+
+![image](https://github.com/user-attachments/assets/955de702-c626-4b16-90eb-56522f668436)
+
+2. Press the `pull` command to fetch updates from the remote repository, including newly created **branches**.
+![image](https://github.com/user-attachments/assets/f2152c7e-a3da-493e-8f6c-eefabcbe98ed)
+
+3. Click the `Auto` button to select which branch you would like to work on:
+![image](https://github.com/user-attachments/assets/ea9f9775-9afc-4ea7-9042-031e2917abea)
+
+4. It should now list all the available branches. Feel free to select the branch you would be working with and press **OK**.
+
+![image](https://github.com/user-attachments/assets/2674abbb-b865-422f-9182-bf186c90531b)
+
+5. The currently selected branch name will now be displayed.
+![image](https://github.com/user-attachments/assets/32dae766-9142-4ec3-be21-deb34fc4716d)
+
+You successfully switched to your selected branch!!!
+
+---
+
+### Step 4: Make changes
+
+- Commit and push your code changes to the branch you cloned.
+
+- Ideally, do it periodically to have savepoints and to back up your progress.
+
+- TODO
+
+---
+
+### Step 5: Submit for code review
+
+When you're satisfied with your work, create a **pull request (PR)** to request a code review for all of your commits.
+
+- TODO
+
+---
+
+### Step 6: Cleanup
+
+ When the task is done and passed for the code review and the changes are merged into the main branch, delete the branch that you created to fully clean things up.
+
+Navigate towards the projects directory and delete the branch that was already merged:
+
+```bash
+git branch -d <branch-name>
+git branch origin --delete <branch-name>
+```
+
+That's it! You successfully contributed to the project!

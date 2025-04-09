@@ -1,188 +1,98 @@
-# **Sorsogon Community Innovation Labs Portal**
-
-Hello, Portal!
-
-## **How to Contribute?**
-
-### **Table of Contents**
-
-1. [Set up your local development environment](#step-1-set-up-your-local-development-environment)
-
-2. [Clone the repository](#step-2-clone-the-repo)
-
-3. [Create and select a branch](#step-3-create-and-select-a-branch)
-
-4. [Make changes](#step-4-make-changes)
-
-5. [Submit for code review](#step-5-submit-for-code-review)
-
-6. [Cleanup](#step-6-cleanup)
-
----
-
-### Step 1: Set up your local development environment
-
-Before you start, install the necessary tools to start working on the project.
-#### Example:
-- [Nodejs](https://nodejs.org/dist/v22.14.0/node-v22.14.0-x64.msi)
-- [Visual Studio Code](https://code.visualstudio.com/Download)
-- Others...
-
----
-
-### Step 2: Clone the repo
-
-Cloning means downloading the project to your computer.
-
-#### Using VScode:
-
-1. Open `vscode` and press `ctrl + \`  to open the terminal
-
-2. Create a git directory to store all of your repository if you don't have one yet and navigate towards it:
-```bash
-mkdir ~\git
-cd ~\git
-```
-
-3. Copy the repository URL from GitHub:
-
-4. Clone the repository: 
-```bash
-git clone https://github.com/InnovationLabsPH/Portal.git
-```
-
-5. Open the newly cloned repo inside `vscode`:
-```bash
-code ~\git\Portal
-```
-
----
-
-### Step 3: Create and select a branch
-
-A branch lets you work on new features or fixes without affecting the main project. When creating a branch, use a descriptive name that clearly indicates what you are working on.
-
-#### Using Terminal:
-1. [Create a branch (Terminal)](#How-to-create-a-branch-using-the-terminal)
-2. [Switch Branches (Terminal)](#How-to-select-a-branch-using-the-terminal)
-
-#### Using vscode:
-1. [Create a branch (vscode)](#how-to-create-a-branch-inside-vscode)
-2. [Select a branch (vscode)](#how-to-select-a-branch-inside-vscode)
-
-#### How to create a branch using the terminal:
-
-1. Make sure you are inside your projects directory.
-
-2. Create a branch using `git branch <branch-name>` command. Make sure that the branch name describes the purpose of the branch and replaces spaces with `-`:
-```bash
-git branch <replace-this-with-your-branch-named>
-```
-
-3. You can check if the branch was created successfully using `git branch`. A list of branches should now appear:
-```bash
-git branch
-```
-
-4. We then switch into our newly created branch **(This is important)**:
-```bash
-git checkout <branch-name>
-```
-
-5. Now we need to upload the branch we created into the remote repository so other people are aware of it:
-```bash
-git push --set-upstream origin <branch-name>
-```
-
-6. We are done, you successfully created a new branch and ready to start coding!
-
----
-
-#### How to select a branch using the terminal:
-
-1. First we need to list all available branches:
-```bash
-git branch -a
-```
-
-2. After choosing the branch you want to work with we use the `git checkout <branch-name>` command. We will ignore the `/remotes/origin/` part and simply use the branch name:
-```bash
-git checkout <branch-name>
-```
-
-3.  If this is the first time you used this branch then you probably need to set the upstream (this tells git where to push/upload your code):
-```bash
-git push --set-upstream origin <branch-name>
-```
-
----
-
-#### How to create a branch inside vscode:
-
-1. From the upper-left corner of GitHub, click **main** just beside **Branch**.
-
-<img src="https://github.com/user-attachments/assets/095d812d-b356-49f3-81a5-58ed74357e8a" />
-
-2. In the search bar, type the name of your new branch. A "**Create branch ...**" option should appear below.
-
-<img src="https://github.com/user-attachments/assets/f6fa1368-21df-411a-b39b-e0eb229cc4b8" />
-
-3. Click "**Create branch**" and it should automatically create and switch to the new branch.
-
-<img src="https://github.com/user-attachments/assets/f949c358-9e3c-40b9-ba50-4b180062dd3b" />
-
-You successfully created a new branch!!!
-
-#### How to select a branch inside vscode:
-
-1. Inside `vscode`, navigate to the `Source Control` tab. Make sure that the project repository you will be working on is open/active inside the editor.
-
-![image](https://github.com/user-attachments/assets/955de702-c626-4b16-90eb-56522f668436)
-
-2. Press the `pull` command to fetch updates from the remote repository, including newly created **branches**.
-![image](https://github.com/user-attachments/assets/f2152c7e-a3da-493e-8f6c-eefabcbe98ed)
-
-3. Click the `Auto` button to select which branch you would like to work on:
-![image](https://github.com/user-attachments/assets/ea9f9775-9afc-4ea7-9042-031e2917abea)
-
-4. It should now list all the available branches. Feel free to select the branch you would be working with and press **OK**.
-
-![image](https://github.com/user-attachments/assets/2674abbb-b865-422f-9182-bf186c90531b)
-
-5. The currently selected branch name will now be displayed.
-![image](https://github.com/user-attachments/assets/32dae766-9142-4ec3-be21-deb34fc4716d)
-
-You successfully switched to your selected branch!!!
-
----
-
-### Step 4: Make changes
-
-- Commit and push your code changes to the branch you cloned.
-
-- Ideally, do it periodically to have savepoints and to back up your progress.
-
-- TODO
-
----
-
-### Step 5: Submit for code review
-
-When you're satisfied with your work, create a **pull request (PR)** to request a code review for all of your commits.
-
-- TODO
-
----
-
-### Step 6: Cleanup
-
- When the task is done and passed for the code review and the changes are merged into the main branch, delete the branch that you created to fully clean things up.
-
-Navigate towards the projects directory and delete the branch that was already merged:
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+</p>
+
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
+
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+
+## Description
+
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+## Project setup
 
 ```bash
-git branch -d <branch-name>
-git branch origin --delete <branch-name>
+$ npm install
 ```
 
-That's it! You successfully contributed to the project!
+## Compile and run the project
+
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+## Run tests
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+```
+
+## Deployment
+
+When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+
+If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+
+```bash
+$ npm install -g mau
+$ mau deploy
+```
+
+With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+
+## Resources
+
+Check out a few resources that may come in handy when working with NestJS:
+
+- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
+- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
+- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
+- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
+- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
+- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
+- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
+- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+
+## Support
+
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## Stay in touch
+
+- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
+
+## License
+
+Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
