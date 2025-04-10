@@ -157,11 +157,8 @@ You successfully switched to your selected branch!!!
 ---
 
 ### Step 4: Make changes
-
 - Commit and push your code changes to the branch you cloned.
-
 - Ideally, do it periodically to have savepoints and to back up your progress.
-
 - TODO
 
 ---
